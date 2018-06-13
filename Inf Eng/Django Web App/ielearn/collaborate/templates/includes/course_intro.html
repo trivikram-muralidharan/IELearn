@@ -1,0 +1,32 @@
+{% block course_intro %}
+{% load static %}
+
+<div class="course_back">
+    <div class="container">
+        <h3 id="course">Explore</h3>
+        <div class="row">
+
+        {% for test in course_data %}
+            <div class="col-lg-3">
+                <a href= {{ test.link }} >
+                    <div class="w3-card-4 course_box">
+                        
+                            <header class="w3-container w3-transparent w3-text-white">
+                                    <p><b style="font-size: 25px; color: rgb(241, 75, 46);">{{ test.head }}</b></p>
+                                    <h3 class="symbols"><i class="{{ test.icon }}"></i></h3>
+                            </header>
+                            <div class="w3-container w3-transparent w3-text-white">
+                                    <p style="color: rgb(241, 75, 46);">{{ test.description }}</p>
+                            </div>
+                    </div>
+                </a>
+            </div>
+
+        {% endfor %}
+            
+
+        </div>
+    </div> 
+</div>
+
+{% endblock %}

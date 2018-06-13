@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IE Learn-Home</title>
+    {% include "./includes/navbar.html" %}
+    {% include "./includes/home_intro.html" %}
+    {% include "./includes/course_intro.html" %}
+    {% include "./includes/meta_and_links.html" %}
+    {% include "./includes/testimonials_home.html" %}
+    {% include "./includes/placetolearn.html" %}
+    {% include "./includes/footer.html" %}
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/navigation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/homeintro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/testimony.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/course_intro.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/placetolearn.css' %}">
+
+
+    {% block metaandstyle %}
+    {% endblock %}
+
+    <script>
+        document.getElementById("nav-bar-home").style.color = 'rgb(12, 194, 124)';
+    </script>
+    
+</head>
+<body>
+
+    {% block navigation %}
+    {% endblock %}
+
+    {% block homeintro %}
+    {% endblock %}
+
+    {% block course_intro %}
+    {% endblock %}
+
+    {% block testimony %}
+    {% endblock %}
+
+    {% block place_to_learn %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+</body>
+</html>

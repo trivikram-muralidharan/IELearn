@@ -1,0 +1,29 @@
+{% block place_to_learn %}
+{% load static %}
+
+<div class="place_back">
+    <div class="container">
+        <h3 id="place">Why is this <b>"THE BEST PLACE TO LEARN"</b> ????</h3>
+        <div class="row">
+
+        {% for test in place_data %}
+            <div class="col-lg-3">
+                    <div class="w3-card-4 place_box">
+                        
+                            <header class="w3-container w3-transparent w3-text-white">
+                                    <p><b style="font-size: 25px; color: black;">{{ test.head }}</b></p>
+                            </header>
+                            <div class="w3-container w3-transparent w3-text-white">
+                                    <p style="color: black;">{{ test.description }}</p>
+                            </div>
+                    </div>
+            </div>
+
+        {% endfor %}
+            
+
+        </div>
+    </div> 
+</div>
+
+{% endblock %}

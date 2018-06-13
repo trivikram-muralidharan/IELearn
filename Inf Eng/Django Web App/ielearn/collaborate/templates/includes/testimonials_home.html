@@ -1,0 +1,62 @@
+{% block testimony %}
+{% load static %}
+
+<div class="testimony_back">
+    <div class="container">
+        <h3 id="testimonial">Testimonial</h3>
+        <div class="row">
+
+        {% for test in testimonial_data %}
+            <div class="col-lg-4">
+                <div class="w3-card-4 testimonial_box">
+                    
+                    <header class="w3-container w3-transparent w3-text-white">
+                        {% if test.rating == '1' %}
+                            <div id="rating">
+                                <span>★</span>
+                            </div>
+                        {% elif test.rating == '2' %}
+                            <div id="rating">
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                        {% elif test.rating == '3' %}
+                            <div id="rating">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                        {% elif test.rating == '4' %}
+                            <div id="rating">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                        {% elif test.rating == '5' %}
+                            <div id="rating">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
+                        {% else %}
+                            <div id="rating">
+                            </div>
+                        {% endif %}
+                        
+                        <p><b style="font-size: 25px;">{{ test.name }},</b> {{ test.description }} of {{ test.children }}</p>
+                    </header>
+                    <div class="w3-container w3-transparent w3-text-white">
+                        <p>{{ test.testimony }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            
+
+        </div>
+    </div> 
+</div>
+{% endblock %}

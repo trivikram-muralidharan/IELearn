@@ -1,0 +1,36 @@
+{% block navigation %}
+
+<div class="navbar navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button onclick="button_toggle_cus()" type="button" class="navbar-toggle btn" data-toggle="collapse" data-target="#myNavbar">
+                <span id="collapse-button" class="fa fa-arrow-down arrow"></span>
+            </button>
+            <a class="navbar-brand" href="#">IE-Learn</a>
+        </div>
+        <div id="myNavbar" class="navbar-right collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a id="nav-bar-home" href="#">Home</a></li>
+                <li><a id="nav-bar-explore" href="#">Explore</a></li>
+                <li><a id="nav-bar-parent" href="#">Parents sign in</a></li>
+                <li><a id="nav-bar-child" href="#">Kids sign in</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script>
+    var x = 0;
+
+    function button_toggle_cus() {
+        if (x == 0) {
+            document.getElementById("collapse-button").className = "fa fa-arrow-up fa-lg arrow";
+            x = 1;
+        } else {
+            document.getElementById("collapse-button").className = "fa fa-arrow-down fa-lg arrow";
+            x = 0;
+        }
+    }
+</script>
+
+{% endblock %}

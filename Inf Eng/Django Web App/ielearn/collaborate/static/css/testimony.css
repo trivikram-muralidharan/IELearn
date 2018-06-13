@@ -1,0 +1,35 @@
+.testimony_back{
+    background-image: url("/static/img/testimony.jpg");
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+#testimonial{
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+.row{
+    text-align: center;
+}
+
+.testimonial_box{
+    margin-bottom: 30px;
+    border: 1px solid white;
+    text-align: left;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+#rating span {
+cursor: pointer;
+font-size: 28px;
+padding: 0 2px;
+color: #fff;
+}
