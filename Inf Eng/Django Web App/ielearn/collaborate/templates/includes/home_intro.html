@@ -1,0 +1,27 @@
+{% load static %}
+
+{% for test in home_data %}
+    <div class="mySlides w3-display-container w3-center {{ test.class }}">
+        <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3 style="-webkit-text-stroke: 1.5px rgb(60,60,60); font-size: 25px; font-family: monospace;">{{ test.caption }}</h3>
+        <p style="-webkit-text-stroke: 1.5px rgb(60,60,60);font-size: 18px; font-family: monospace;"><b>{{ test.description }}</b></p>   
+        </div>
+    </div>
+{% endfor %}
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "block";  
+setTimeout(carousel, 4000);    
+}
+</script>

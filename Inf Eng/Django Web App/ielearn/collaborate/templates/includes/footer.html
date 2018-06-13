@@ -1,0 +1,48 @@
+{% block footer %}
+{% load static %}
+
+<div class="footer_back">
+    <div class="container">
+        <div class="row" style="margin-bottom: 30px;">
+
+            <div class="col-lg-3">
+                <img class="side_footer w3-hide-small" src="{% static '/img/side_footer.png' %}">
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="lisst"><b style="font-size: 25px;"><a href="#">Explore</a></b>
+                    <li><a href="#">Science</a></li>
+                    <li><a href="#">Maths</a></li>
+                    <li><a href="#">Creative Arts</a></li>
+                    <li><a href="#">Tinkering and Technology</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul class="lisst"><b style="font-size: 25px;"><a href="#">Company</a></b>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Professionals</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Community guidance</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <ul class="lisst"><b style="font-size: 25px;">Follow us</b>
+                    <li>
+                        <h3>
+                            <a href="#" class="links_banner"><i class="fa fa-facebook"></i></a>&nbsp;
+                            <a href="#" class="links_banner"><i class="fa fa-youtube"></i></a>&nbsp;
+                            <a href="#" class="links_banner"><i class="fa fa-instagram"></i></a>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

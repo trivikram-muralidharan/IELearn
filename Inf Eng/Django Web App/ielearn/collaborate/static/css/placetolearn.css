@@ -1,0 +1,25 @@
+.place_back{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/img/place.jpg");
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(10%);
+}
+
+#place{
+    color: black;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+.place_box{
+    margin-bottom: 30px;
+    border: 1px solid black;
+    text-align: left;
+    border-radius: 30px;
+    padding: 10px 10px 10px 10px;
+}
