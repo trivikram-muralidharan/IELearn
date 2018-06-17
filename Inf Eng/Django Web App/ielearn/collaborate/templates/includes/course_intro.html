@@ -1,0 +1,34 @@
+{% block course_intro %}
+{% load static %}
+
+<div class="course_back">
+    <div class="container cus_container">
+        <h3 id="course">Explore</h3>
+
+        {% for test in course_data %}
+            <div class="w3-card-4 course_box">
+                <div class="row"> 
+                    <div class="col-lg-4">
+                        <header class="w3-container w3-transparent w3-text-white">
+                                <p style=" text-align: center; font-family: monospace;">
+                                    <b style="font-size: 25px; color: white;">{{ test.head }}</b>
+                                </p>
+                                <h3 class="symbols" style="text-align: center;"><i class="{{ test.icon }}"></i></h3>
+                        </header>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="w3-container w3-transparent w3-text-white">
+                                <p style="color: white;">{{ test.description }}</p>
+                        </div>
+                        <button class="course_view">View</button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+            
+
+        
+    </div> 
+</div>
+
+{% endblock %}

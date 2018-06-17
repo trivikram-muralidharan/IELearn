@@ -1,0 +1,91 @@
+.course_back{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/static/img/course_intro.jpg");
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#course{
+    color: white;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: monospace;
+    text-align: center;
+
+}
+
+.course_box{
+    margin-bottom: 30px;
+    border: 1px solid white;
+    text-align: left;
+    border-radius: 80px;
+    padding: 10px 10px 10px 10px;
+    touch-action: manipulation;
+    user-select: none;
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    
+}
+
+.course_box:hover,
+.course_box:active,
+.course_box:focus{
+    border-color: rgb(241, 75, 46);
+    background-color: rgb(241, 75, 46);
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.symbols{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+}
+
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none;
+}
+
+.cus_container{
+    width: 50%;
+}
+
+.course_view{
+    float: right;
+    margin-right: 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 2px 15px 2px 15px;
+    border-radius: 15px;
+    touch-action: manipulation;
+    user-select: none;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.course_view:hover,
+.course_view:active,
+.course_view:focus{
+    color: rgb(241, 75, 46);
+    border-color: white;
+    background-color: white;
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+@media screen and (max-width: 600px) {
+    .cus_container{
+        width: 100%;;
+    }
+  }
