@@ -1,0 +1,130 @@
+.testimony_back{
+    background: linear-gradient(rgba(40, 105, 75, 0.2), rgba(40, 105, 75, 0.2)),
+    url("/static/img/testimony.jpg");
+    height: auto; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimonial{
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+
+.row{
+    text-align: center;
+}
+
+.testimonial_box{
+    
+    border: 1px solid white;
+    text-align: left;
+    border-radius: 90px;
+    padding: 25px 20px 25px 20px;
+    width: 80%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#rating span {
+cursor: pointer;
+font-size: 28px;
+padding: 0 2px;
+color: #fff;
+}
+
+.slideshow-container_t {
+    position: relative;
+    margin: auto;
+    width: 50%;
+}
+
+.dot_t {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+.active_t, .dot_t:hover {
+height: 20px;
+width: 20px;
+background-color: #717171;
+}
+
+.fade_t {
+    -webkit-animation-name: fade_t;
+    -webkit-animation-duration: 2s;
+    animation-name: fade_t;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade_t {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade_t {
+from {opacity: .4} 
+to {opacity: 1}
+}
+  
+.my_Slides {display: none}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+@media screen and (max-width: 600px) {
+    .slideshow-container_t {
+        position: relative;
+        margin: auto;
+        width: 95%;
+    }
+    .prev, .next,.text {font-size: 11px}
+    .testimonial_box{
+    
+        border: 1px solid white;
+        text-align: left;
+        border-radius: 90px;
+        padding: 25px 10px 25px 10px;
+        width: 80%;
+        margin: auto;
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+body {
+    margin:0
+}

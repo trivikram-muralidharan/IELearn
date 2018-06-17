@@ -1,0 +1,80 @@
+.place_back{
+    background: linear-gradient(rgba(100, 40, 105, 0.3), rgba(100, 40, 105, 0.3)),
+    url("/static/img/place.jpg");
+    height: 550px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 30px 30px 30px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+#place{
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.place_box{
+    
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 80px;
+    padding: 40px 20px 40px 20px;
+    width: 45%;
+    margin: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+  height: 18px;
+  width: 18px;
+}
+
+
+.mySlides {display: none;}
+
+@media screen and (max-width: 600px) {
+    .place_box{
+        width: 98%;
+    }
+    .place_back{
+        height: 610px;;
+    }
+}
+
+.fade_test {
+    -webkit-animaplace_backtion-name: fade_test;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade_test;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade_test {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade_test {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
