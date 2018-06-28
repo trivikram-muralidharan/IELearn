@@ -1,0 +1,106 @@
+{% block testimony %}
+
+<div class="testimony_back">
+    <br>
+    <br>
+    <h3 id="testimonial" style="text-align: center;">Testimonials</h3>
+    <br>
+    <div class="slideshow-container_t">
+    {% for test in testimonial_data %}
+    <div class="my_Slides fade_t">
+        <div class="w3-card-4 testimonial_box">
+            
+            <header class="w3-container w3-transparent w3-text-white">
+                {% if test.rating == '1' %}
+                    <div id="rating">
+                        <span>★</span>
+                    </div>
+                {% elif test.rating == '2' %}
+                    <div id="rating">
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                {% elif test.rating == '3' %}
+                    <div id="rating">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                {% elif test.rating == '4' %}
+                    <div id="rating">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                {% elif test.rating == '5' %}
+                    <div id="rating">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                    </div>
+                {% else %}
+                    <div id="rating">
+                    </div>
+                {% endif %}
+                
+                <p><b style="font-size: 25px;">{{ test.name }},</b> {{ test.description }} of {{ test.children }}</p>
+            </header>
+            <div class="w3-container w3-transparent w3-text-white">
+                <p>{{ test.testimony }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <a class="prev" onclick="plus_Slides(-1)">&#10094;</a>
+    <a class="next" onclick="plus_Slides(1)">&#10095;</a>
+
+    <div style="text-align:center">
+        <span class="dot_t" onclick="current_Slide(1)"></span> 
+        <span class="dot_t" onclick="current_Slide(2)"></span> 
+        <span class="dot_t" onclick="current_Slide(3)"></span> 
+        <span class="dot_t" onclick="current_Slide(4)"></span> 
+        <span class="dot_t" onclick="current_Slide(5)"></span> 
+        <span class="dot_t" onclick="current_Slide(6)"></span> 
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
+
+
+
+<script>
+var slide_Index = 1;
+show_Slides(slide_Index);
+
+function plus_Slides(n) {
+  show_Slides(slide_Index += n);
+}
+
+function current_Slide(n) {
+  show_Slides(slide_Index = n);
+}
+
+function show_Slides(n) {
+  var i;
+  var slides = document.getElementsByClassName("my_Slides");
+  var dot_ts = document.getElementsByClassName("dot_t");
+  if (n > slides.length) {slide_Index = 1}    
+  if (n < 1) {slide_Index = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dot_ts.length; i++) {
+      dot_ts[i].className = dot_ts[i].className.replace(" active_t", "");
+  }
+  slides[slide_Index-1].style.display = "block";  
+  dot_ts[slide_Index-1].className += " active_t";
+}
+</script>
+{% endblock %}
+

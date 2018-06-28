@@ -1,0 +1,90 @@
+{% block login %}
+       
+<div id="kid_login" class="modal">
+  <form class="modal-content animate container_cus_login" action="#">
+    <div>
+      <span id="kids_close" onclick="document.getElementById('kid_login').style.display='none'" class="close" title="Close Window">&times;</span>
+      <img src="/static/img/kids_login.jpg" alt="Avatar" class="avatar">
+    </div><br>
+    <div>
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+      <label for="Modalpsw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+    </div>
+    <div style="margin-top: 3px;">
+      <span><a href="#"><button class="login_button" style="float: none;">Forgot</button></a></span>
+      <button class="login_button" type="submit">Login</button>
+    </div>
+  </form>
+</div>
+
+<div id="parent_login" class="modal">
+  <form class="modal-content animate container_cus_login" action="#">
+    <div>
+      <span id="parents_close" onclick="document.getElementById('parent_login').style.display='none'" class="close" title="Close Window">&times;</span>
+      <img src="/static/img/parent_login.jpg" alt="Avatar" class="avatar">
+    </div><br>
+    <div>
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+    </div>
+    <div style="margin-top: 3px;">
+      <span><a href="#"><button class="login_button" style="float: none;">Forgot</button></a></span>
+      <button class="login_button" type="submit">Login</button>
+      <span onclick="parent_sign();"><a href="#"><button class="login_button" style="margin-right: 5px;">New</button></a></span>   
+    </div>
+  </form>
+</div>
+
+<div id="parent_sign" class="modal">
+  <form class="modal-content animate container_cus_login" action="#">
+    <div>
+      <span id="parents_s_close" onclick="document.getElementById('parent_sign').style.display='none'" class="close" title="Close Window">&times;</span>
+      <img src="/static/img/signup.jpg" alt="Avatar" class="avatar">
+    </div><br>
+    <div>
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+      <label for="psw"><b>Email Address</b></label><br>
+      <input type="password" placeholder="Enter Password" name="email" required><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+    </div>
+    <div style="margin-top: 3px;">
+      <span><a href="#"><button class="login_button" style="float: none;">Create</button></a></span>
+
+    </div>
+  </form>
+</div>
+    
+<script>
+var kid = document.getElementById('kid_login');
+var par = document.getElementById('parent_login');
+var par_s = document.getElementById('parent_sign');
+
+var modal
+
+window.onclick = function(event) {
+  if( kid.style.display == 'block'){
+    modal =kid;
+  }
+  if( par_s.style.display == 'block'){
+    modal =par_s;
+  }
+  if( par.style.display == 'block'){
+    modal = par;
+  }
+
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+{% endblock %}

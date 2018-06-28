@@ -1,0 +1,29 @@
+{% block homeintro %}
+{% load static %}
+
+{% for test in home_data %}
+    <div class="myslides w3-display-container w3-center {{ test.class }} fade">
+        <div class="w3-display-bottommiddle w3-container w3-padding-32">
+        <h3 style="font-size: 25px; font-family: monospace;color: white">{{ test.caption }}</h3>
+        <p class=" w3-hide-small" style="font-size: 18px; font-family: monospace;color: white"><b>{{ test.description }}</b></p>   
+        </div>
+    </div>
+{% endfor %}
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("myslides");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "block";  
+setTimeout(carousel, 3000);    
+}
+</script>
+{% endblock %}

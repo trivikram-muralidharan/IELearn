@@ -1,0 +1,121 @@
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 8px 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    /* Set a style for all buttons */
+    .login_button {
+        font-family: monospace;
+        float: right;
+        background-color: rgb(241, 75, 46);
+        border: 2px solid rgb(241, 75, 46);
+        color: white;
+        cursor: pointer;
+        border-radius: 15px;
+        touch-action: manipulation;
+        padding: 5px 10px 5px 10px;
+        user-select: none;
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+        width: 80px;
+    }
+    
+    .login_button:hover,
+    .login_button:active,
+    .login_button:focus {
+        color: rgb(241, 75, 46);
+        background-color: white;
+        border: 2px solid rgb(241, 75, 46);
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+    }
+    /* Extra styles for the cancel button_cus */
+
+    
+    /* Center the image and position the close button_cus */
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+    }
+    
+
+
+    img.avatar {
+        width: 100%;
+        border-radius: 10%;
+    }
+
+    
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in p style=""lace */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: auto; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 70px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        padding: 20px;
+        width: 40%; /* Could be more or less, depending on screen size */
+    }
+    
+.close {
+    right: 0;
+    top: 0;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(241, 75, 46);
+    cursor: pointer;
+    opacity: 1;
+}
+    
+.animate {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+
+/* Change styles for span and cancel button_cus on extra small screens */
+@media screen and (max-width: 600px) {
+
+
+    .modal-content{
+        padding: 20px;
+        width: 90%;
+    }
+}
