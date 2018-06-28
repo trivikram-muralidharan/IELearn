@@ -1,0 +1,63 @@
+.navbar-brand {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    color: rgb(60, 60, 60);
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: rgb(12, 194, 124);
+}
+
+.navbar {
+    background-color: white;
+}
+
+.navbar-nav li a {
+    font-size: 18px;
+    color: rgb(60, 60, 60);
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+    color: rgb(12, 194, 124);
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background-color: white;
+}
+
+.arrow {
+    color: rgb(60, 60, 60);
+    font-size: 18px;
+}
+
+.btn {
+    border-color: rgb(60, 60, 60);
+}
+
+.btn:hover,
+.btn:focus {
+    border-color: rgb(12, 194, 124);
+}
+
+a:hover,
+a:focus{
+    text-decoration: none;
+}
+
+#nav-bar-child{
+    font-family: Pacifico;
+    font-size: 20px;
+    color: rgb(241, 75, 46);
+}
+
+#nav-bar-child:hover,
+#nav-bar-child:active{
+    color: rgb(12, 194, 124);
+}
